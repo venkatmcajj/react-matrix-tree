@@ -1,0 +1,59 @@
+{
+  "name": "react-matrix-tree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "scripts": {
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint",
+    "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "test": "jest --config jestconfig.json"
+  },
+  "keywords": [
+    "react",
+    "treeview",
+    "matrix",
+    "binary",
+    "react tree view"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkatmcajj/react-matrix-tree.git"
+  },
+  "author": "Venkatesh",
+  "license": "MIT",
+  "devDependencies": {
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.1",
+    "@types/react": "^18.0.37",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^29.5.0",
+    "jest-canvas-mock": "^2.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "prettier": "^2.8.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ]
+}
