@@ -1,3 +1,3 @@
-import MyCounter from './components/App'
+import Tree from './components/App'
 
-export { MyCounter }
+export { Tree }
