@@ -1,20 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import active from './active.png'
-import { Tree } from '../../dist/esm'
-enum Tooltiptype {
-  HTML,
-  TEXT,
-}
-type Arrayvalues = {
-  imageSource?: string
-  title: string
-  tooltip?: string
-  tooltiptype?: Tooltiptype
-  onClick?: Function
-  data?: Array<Arrayvalues>
-}
+import { Tree } from 'react-matrix-tree'
+
 function App() {
-  const [data, setData] = useState<Array<Arrayvalues>>([
+  const data = [
     {
       title: 'Venkat1',
       tooltip: 'Alert',
@@ -125,7 +114,7 @@ function App() {
         },
       ],
     },
-  ])
+  ]
 
   return <Tree data={data} isMobile={false} />
 }
