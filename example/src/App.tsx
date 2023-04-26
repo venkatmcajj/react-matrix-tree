@@ -1,6 +1,6 @@
 import React from 'react'
 import active from './active.png'
-import { Tree } from 'react-matrix-tree'
+import { Tree } from '../../dist/esm'
 function App() {
   const data = [
     {

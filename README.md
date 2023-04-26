@@ -29,11 +29,11 @@ import React from 'react'
 import { Tree } from 'react-matrix-tree'
 
 function App() {
-  const [data, setData] = useState([{ title: 'Too Easy' }])
+  const data = [{ title: 'Too Easy' }]
 
   return (
     <div>
-      <Tree data={data} isMobile={false} />
+      <Tree color='red' data={data} isMobile={false} />
     </div>
   )
 }

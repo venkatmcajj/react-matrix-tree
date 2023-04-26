@@ -59,5 +59,8 @@
     "dist",
     "LICENSE",
     "README.md"
-  ]
+  ],
+  "dependencies": {
+    "styled-components": "^5.3.10"
+  }
 }
