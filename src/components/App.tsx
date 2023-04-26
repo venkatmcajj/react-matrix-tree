@@ -7,10 +7,10 @@ interface IColor {
 const BottomArrow = styled.div<IColor>`
   border-bottom: 5px solid ${(props) => props.color};
 `
-const BottomArrowDownContainer = styled.div<IColor>`
+const BottomArrowDownContainer = styled.div`
   display: flex,
   justify-content: space-between,
-  &:last-child{
+  &::last-child {
     margin-right: -19px;
     margin-left: auto;
   }
@@ -113,7 +113,7 @@ const Tree = ({ data, isMobile, color }: Props) => {
                           <TopArrowUp color={color} />
                         </TopArrowUpContainer>
                         <BottomArrow color={color} />
-                        <BottomArrowDownContainer color={color}>
+                        <BottomArrowDownContainer>
                           {e.data.map((e1: any) => {
                             return <BottomArrowDown color={color} key={e1.title}></BottomArrowDown>
                           })}
