@@ -29,7 +29,7 @@ const BottomArrowDown = styled.div`
   border-right: 20px solid transparent;
   margin-top: 20px;
   position: relative;
-  &:before {
+  &::before {
     content: '';
     width: 4px;
     height: 25px;
@@ -50,7 +50,7 @@ const TopArrowUp = styled.div`
   border-right: 20px solid transparent;
   margin-bottom: 20px;
   position: relative;
-  &:before {
+  &::before {
     content: '';
     width: 4px;
     height: 25px;
