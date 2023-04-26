@@ -7,6 +7,6 @@ import { Tree } from '../src'
 
 describe('Common render', () => {
   it('renders without crashing', () => {
-    render(<Tree data={[{ title: 'Message' }]} isMobile={false} />)
+    render(<Tree color='#6a0136' data={[{ title: 'Message' }]} isMobile={false} />)
   })
 })
