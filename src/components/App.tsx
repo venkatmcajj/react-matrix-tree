@@ -1,9 +1,12 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
 //
-const BottomArrow = styled('div')({
-  borderBottom: `5px solid ${(props: any) => props.color}`,
-})
+interface IColor {
+  color: string
+}
+const BottomArrow = styled.div<IColor>`
+  borderbottom: 5px solid ${(props) => props.color};
+`
 const BottomArrowDownContainer = styled.div`
   display: flex,
   justify-content: space-between,
@@ -74,13 +77,14 @@ type Arrayvalues = {
 type Props = {
   data: Array<Arrayvalues>
   isMobile: boolean
+  color: string
 }
 type TreeProps = {
   childrens: Array<Arrayvalues>
   level: number
   ismobileview: boolean
 }
-const Tree = ({ data, isMobile }: Props) => {
+const Tree = ({ data, isMobile, color }: Props) => {
   useEffect(() => {
     if (!data) {
       throw Error('Data field is undefined, need array value to render a Tree component')
@@ -113,7 +117,7 @@ const Tree = ({ data, isMobile }: Props) => {
                         <TopArrowUpContainer>
                           <TopArrowUp />
                         </TopArrowUpContainer>
-                        <BottomArrow color='#6a0136' />
+                        <BottomArrow color={color} />
                         <BottomArrowDownContainer>
                           {e.data.map((e1: any) => {
                             return <BottomArrowDown key={e1.title}></BottomArrowDown>
