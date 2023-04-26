@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-//
+
 interface IColor {
   color: string
 }
 const BottomArrow = styled.div<IColor>`
-  borderbottom: 5px solid ${(props) => props.color};
+  border-bottom: 5px solid ${(props) => props.color};
 `
-const BottomArrowDownContainer = styled.div`
+const BottomArrowDownContainer = styled.div<IColor>`
   display: flex,
   justify-content: space-between,
   &:last-child{
@@ -19,12 +19,12 @@ const TopArrowUpContainer = styled('div')({
   display: 'flex',
   justifyContent: 'center',
 })
-const BottomArrowDown = styled.div`
+const BottomArrowDown = styled.div<IColor>`
   content: '';
   width: 0;
   height: 0;
   margin-left: -19px;
-  border-top: 15px solid #6a0136;
+  border-top: 15px solid ${(props) => props.color};
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   margin-top: 20px;
@@ -33,7 +33,7 @@ const BottomArrowDown = styled.div`
     content: '';
     width: 4px;
     height: 25px;
-    background: #6a0136;
+    background: ${(props) => props.color};
     margin-right: -2px;
     margin-bottom: 14px;
     position: absolute;
@@ -41,11 +41,11 @@ const BottomArrowDown = styled.div`
     right: 50%;
   }
 `
-const TopArrowUp = styled.div`
+const TopArrowUp = styled.div<IColor>`
   content: '';
   width: 0;
   height: 0;
-  border-bottom: 15px solid #6a0136;
+  border-bottom: 15px solid ${(props) => props.color};
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   margin-bottom: 20px;
@@ -54,7 +54,7 @@ const TopArrowUp = styled.div`
     content: '';
     width: 4px;
     height: 25px;
-    background: #6a0136;
+    background: ${(props) => props.color};
     margin-right: -3px;
     margin-top: 14px;
     position: absolute;
@@ -110,12 +110,12 @@ const Tree = ({ data, isMobile, color }: Props) => {
                         }}
                       >
                         <TopArrowUpContainer>
-                          <TopArrowUp />
+                          <TopArrowUp color={color} />
                         </TopArrowUpContainer>
                         <BottomArrow color={color} />
-                        <BottomArrowDownContainer>
+                        <BottomArrowDownContainer color={color}>
                           {e.data.map((e1: any) => {
-                            return <BottomArrowDown key={e1.title}></BottomArrowDown>
+                            return <BottomArrowDown color={color} key={e1.title}></BottomArrowDown>
                           })}
                         </BottomArrowDownContainer>
                       </div>

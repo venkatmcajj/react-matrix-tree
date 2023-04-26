@@ -1,6 +1,7 @@
 import React from 'react'
 import active from './active.png'
 import { Tree } from 'react-matrix-tree'
+
 function App() {
   const data = [
     {
@@ -115,7 +116,11 @@ function App() {
     },
   ]
 
-  return <Tree color='red' data={data} isMobile={false} />
+  return (
+    <div>
+      <Tree color='red' data={data} isMobile={false} />
+    </div>
+  )
 }
 
 export default App
