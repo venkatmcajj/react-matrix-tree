@@ -10,7 +10,7 @@ const BottomArrow = styled.div<IColor>`
 const BottomArrowDownContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  &::last-child {
+  &:last-child {
     margin-right: -19px;
     margin-left: auto;
   }
@@ -124,7 +124,6 @@ const Tree = ({ data, isMobile, color }: Props) => {
                   )}
                 </>
               )}
-              {/* <connection from='#d1' to='#d2' color='red' tail></connection> */}
             </div>
           )
         })}
