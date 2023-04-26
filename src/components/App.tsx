@@ -68,7 +68,7 @@ type Arrayvalues = {
   title: string
   tooltip?: string
   tooltiptype?: Tooltiptype
-  onClick?: Function
+  onClick?: Event
   data?: Array<Arrayvalues>
 }
 type Props = {
