@@ -115,7 +115,7 @@ function App() {
     },
   ]
 
-  return <Tree data={data} isMobile={false} />
+  return <Tree color='red' data={data} isMobile={false} />
 }
 
 export default App

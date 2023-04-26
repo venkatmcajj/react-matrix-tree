@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 //
 interface IColor {
@@ -85,11 +85,6 @@ type TreeProps = {
   ismobileview: boolean
 }
 const Tree = ({ data, isMobile, color }: Props) => {
-  useEffect(() => {
-    if (!data) {
-      throw Error('Data field is undefined, need array value to render a Tree component')
-    }
-  }, [data])
   const GetTree = ({ childrens, level, ismobileview }: TreeProps) => {
     return (
       <div style={{ display: 'flex', flexWrap: 'wrap', textAlign: 'center' }}>
