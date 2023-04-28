@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main View render Main view renders without crashing 1`] = `
+<div
+  onClick={[Function]}
+>
+  <h5>
+    Test
+  </h5>
+</div>
+`;
