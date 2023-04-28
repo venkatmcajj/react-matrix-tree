@@ -70,7 +70,7 @@ type ChildProps = {
 }
 function ChildView({ ismobileview, level, item, color }: ChildProps) {
   const { data = [] } = item
-  let canShowChild: boolean = false
+  let canShowChild = false
   if (ismobileview) {
     if (level <= 3 && data.length <= 2) {
       canShowChild = true
