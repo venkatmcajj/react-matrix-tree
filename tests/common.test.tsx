@@ -12,23 +12,7 @@ describe('Common render', () => {
     render(<Tree color='#6a0136' data={[{ title: 'Message' }]} isMobile={false} />)
   })
 })
-
-describe('Main View render', () => {
-  it('Main view changes test after click event', () => {
-    const { getByText } = render(
-      <MainView
-        data={{
-          title: 'Test',
-          onClick: (e) => {
-            e.currentTarget.innerHTML = 'Testing After Click'
-          },
-        }}
-      />,
-    )
-    fireEvent.click(getByText(/Test/i))
-    expect(getByText(/Testing/i)).toBeInTheDocument()
-  })
-
+describe('Child View Render', () => {
   it('Child view render check mobileview', () => {
     const { getAllByText } = render(
       <ChildView
@@ -53,6 +37,8 @@ describe('Main View render', () => {
     )
     expect(getAllByText(/Test/i).length).toBe(3)
   })
+})
+describe('Child view desktop', () => {
   it('Child view render check desktopview', () => {
     const { getAllByText } = render(
       <ChildView
@@ -76,5 +62,21 @@ describe('Main View render', () => {
       />,
     )
     expect(getAllByText(/Test/i).length).toBe(4)
+  })
+})
+describe('Main View render', () => {
+  it('Main view changes test after click event', () => {
+    const { getByText } = render(
+      <MainView
+        data={{
+          title: 'Test',
+          onClick: (e) => {
+            e.currentTarget.innerHTML = 'Testing After Click'
+          },
+        }}
+      />,
+    )
+    fireEvent.click(getByText(/Test/i))
+    expect(getByText(/Testing/i)).toBeInTheDocument()
   })
 })
