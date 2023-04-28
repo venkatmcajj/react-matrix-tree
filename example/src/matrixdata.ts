@@ -9,7 +9,7 @@ export type Arrayvalues = {
   title: string
   tooltip?: string
   tooltiptype?: Tooltiptype
-  onClick?: () => void
+  onClick?: (e: React.MouseEvent<HTMLElement, MouseEvent>, item: Arrayvalues) => void
   data?: Array<Arrayvalues>
 }
 export const OneMatrix: Array<Arrayvalues> = [
@@ -17,7 +17,9 @@ export const OneMatrix: Array<Arrayvalues> = [
     title: 'Title1',
     tooltip: 'Alert',
     imageSource: active,
-    onClick: () => {},
+    onClick: () => {
+      alert('Testing Success')
+    },
     data: [
       {
         title: 'Title11',
