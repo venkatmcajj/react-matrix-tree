@@ -1,0 +1,29 @@
+body {
+  overflow: hidden;
+}
+html {
+  height: 100%;
+}
+.btn {
+  border-radius: 5px;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border: none;
+  margin: 5px;
+}
+.btn:active,
+.btn:hover,
+.btn:focus {
+  border: 3px solid skyblue;
+}
+
+.container {
+  text-align: center;
+  margin-bottom: 20;
+  width: 100%;
+}
+.treecontainer {
+  justify-content: center;
+  display: flex;
+}

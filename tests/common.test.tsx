@@ -49,9 +49,87 @@ describe('Child view desktop', () => {
           },
           data: [
             {
-              title: 'Test',
+              title: 'Title1',
+              tooltip: 'Alert',
+
               data: [
-                { title: 'Test', data: [{ title: 'Test', data: [{ title: 'Test', data: [{ title: 'Test' }] }] }] },
+                {
+                  title: 'Title11',
+                  tooltip: 'Alert',
+
+                  data: [
+                    {
+                      title: 'Add',
+                      tooltip: 'Alert',
+
+                      data: [
+                        {
+                          title: 'Add',
+                          tooltip: 'Alert',
+
+                          data: [
+                            {
+                              title: 'Add',
+                              tooltip: 'Alert',
+
+                              data: [
+                                {
+                                  title: 'Add',
+                                  tooltip: 'Alert',
+
+                                  data: [],
+                                },
+                                {
+                                  title: 'Add',
+                                  tooltip: 'Alert',
+
+                                  data: [],
+                                },
+                              ],
+                            },
+                            {
+                              title: 'Add',
+                              tooltip: 'Alert',
+
+                              data: [],
+                            },
+                          ],
+                        },
+                        {
+                          title: 'Add',
+                          tooltip: 'Alert',
+
+                          data: [],
+                        },
+                      ],
+                    },
+                    {
+                      title: 'Add',
+                      tooltip: 'Alert',
+
+                      data: [],
+                    },
+                  ],
+                },
+                {
+                  title: 'Title21',
+                  tooltip: 'Alert',
+
+                  data: [
+                    {
+                      title: 'Title211',
+                      tooltip: 'Alert',
+
+                      data: [],
+                    },
+                    {
+                      title: 'Title212',
+                      tooltip: 'Alert',
+
+                      data: [],
+                    },
+                  ],
+                },
               ],
             },
           ],
@@ -61,7 +139,7 @@ describe('Child view desktop', () => {
         color='red'
       />,
     )
-    expect(getAllByText(/Test/i).length).toBe(4)
+    expect(getAllByText(/Add/i).length).toBe(4)
   })
 })
 describe('Main View render', () => {

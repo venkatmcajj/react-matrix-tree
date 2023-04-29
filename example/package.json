@@ -8,10 +8,12 @@
   "devDependencies": {
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "bootstrap": "^5.2.3",
     "parcel": "^2.8.3",
     "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-matrix-tree": "^1.0.9"
+    "react-matrix-tree": "^1.1.1",
+    "styled-components": "^5.3.10"
   }
 }

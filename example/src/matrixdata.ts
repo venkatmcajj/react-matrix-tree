@@ -265,32 +265,7 @@ export const FourMatrix: Array<Arrayvalues> = [
             title: 'Add',
             tooltip: 'Alert',
             imageSource: active,
-            data: [
-              {
-                title: 'Add',
-                tooltip: 'Alert',
-                imageSource: active,
-                data: [],
-              },
-              {
-                title: 'Add',
-                tooltip: 'Alert',
-                imageSource: active,
-                data: [],
-              },
-              {
-                title: 'Add',
-                tooltip: 'Alert',
-                imageSource: active,
-                data: [],
-              },
-              {
-                title: 'Add',
-                tooltip: 'Alert',
-                imageSource: active,
-                data: [],
-              },
-            ],
+            data: [],
           },
           {
             title: 'Add',

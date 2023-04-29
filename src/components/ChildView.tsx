@@ -98,8 +98,8 @@ function ChildView({ ismobileview, level, item, color }: ChildProps) {
             <BottomArrow color={color} />
             <BottomArrowDownContainer>
               {data &&
-                data.map((e1: Arrayvalues) => {
-                  return <BottomArrowDown color={color} key={e1.title}></BottomArrowDown>
+                data.map((e1: Arrayvalues, index1: number) => {
+                  return <BottomArrowDown color={color} key={`${e1.title}${index1}${level}`}></BottomArrowDown>
                 })}
             </BottomArrowDownContainer>
           </div>

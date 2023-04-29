@@ -23,13 +23,15 @@ $ yarn add react-matrix-tree
 
 ## The gist
 
+### One Matrix
+
 ```jsx
 import React from 'react'
 
 import { Tree } from 'react-matrix-tree'
 
 function App() {
-  const data = [{ title: 'Too Easy' }]
+  const data = [{ title: 'Title' }]
 
   return (
     <div>
@@ -38,6 +40,70 @@ function App() {
   )
 }
 ```
+
+<img src="https://github.com/venkatmcajj/react-matrix-tree/tree/master/src/images/one.png" alt="One Matrix">
+
+### Two Matrix
+
+```jsx
+import React from 'react'
+
+import { Tree } from 'react-matrix-tree'
+
+function App() {
+  const data = [{ title: 'Title', data: [{ title: 'Title' }, { title: 'Title' }] }]
+
+  return (
+    <div>
+      <Tree color='red' data={data} isMobile={false} />
+    </div>
+  )
+}
+```
+
+<img src="https://github.com/venkatmcajj/react-matrix-tree/tree/master/src/images/two.png" alt="One Matrix">
+
+### Three Matrix
+
+```jsx
+import React from 'react'
+
+import { Tree } from 'react-matrix-tree'
+
+function App() {
+  const data = [{ title: 'Title', data: [{ title: 'Title' }, { title: 'Title' }, { title: 'Title' }] }]
+
+  return (
+    <div>
+      <Tree color='red' data={data} isMobile={false} />
+    </div>
+  )
+}
+```
+
+<img src="https://github.com/venkatmcajj/react-matrix-tree/tree/master/src/images/three.png" alt="Three Matrix">
+
+### Four Matrix
+
+```jsx
+import React from 'react'
+
+import { Tree } from 'react-matrix-tree'
+
+function App() {
+  const data = [
+    { title: 'Title', data: [{ title: 'Title' }, { title: 'Title' }, { title: 'Title' }, { title: 'Title' }] },
+  ]
+
+  return (
+    <div>
+      <Tree color='red' data={data} isMobile={false} />
+    </div>
+  )
+}
+```
+
+<img src="https://github.com/venkatmcajj/react-matrix-tree/tree/master/src/images/four.png" alt="Four Matrix">
 
 ## The properties
 
