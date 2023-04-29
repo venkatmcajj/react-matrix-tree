@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Tree } from 'react-matrix-tree'
 import { Arrayvalues, FourMatrix, MixedMatrix, OneMatrix, ThreeMatrix, TwoMatrix } from './matrixdata'
-import style from './app.css'
+import './app.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   const [data, setData] = useState<Array<Arrayvalues>>(OneMatrix)
