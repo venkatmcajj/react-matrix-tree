@@ -41,7 +41,7 @@ function App() {
 }
 ```
 
-<img src="https://github.com/venkatmcajj/react-matrix-tree/tree/master/src/images/one.png" alt="One Matrix">
+<img src="https://raw.githubusercontent.com/venkatmcajj/react-matrix-tree/master/src/images/one.png" alt="One Matrix">
 
 ### Two Matrix
 
@@ -61,7 +61,7 @@ function App() {
 }
 ```
 
-<img src="https://github.com/venkatmcajj/react-matrix-tree/tree/master/src/images/two.png" alt="One Matrix">
+<img src="https://raw.githubusercontent.com/venkatmcajj/react-matrix-tree/master/src/images/two.png" alt="One Matrix">
 
 ### Three Matrix
 
@@ -81,7 +81,7 @@ function App() {
 }
 ```
 
-<img src="https://github.com/venkatmcajj/react-matrix-tree/tree/master/src/images/three.png" alt="Three Matrix">
+<img src="https://raw.githubusercontent.com/venkatmcajj/react-matrix-tree/master/src/images/three.png" alt="Three Matrix">
 
 ### Four Matrix
 
@@ -103,7 +103,7 @@ function App() {
 }
 ```
 
-<img src="https://github.com/venkatmcajj/react-matrix-tree/tree/master/src/images/four.png" alt="Four Matrix">
+<img src="https://raw.githubusercontent.com/venkatmcajj/react-matrix-tree/master/src/images/four.png" alt="Four Matrix">
 
 ## The properties
 
