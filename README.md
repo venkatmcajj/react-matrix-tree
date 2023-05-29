@@ -7,6 +7,10 @@ React-matrix-tree allows you to create tree view with different types of matrix.
 ```
 $ npm install --save react-matrix-tree
 $ yarn add react-matrix-tree
+
+import { Tree } from 'react-matrix-tree'
+import 'react-matrix-tree/dist/react-matrix-tree.css';
+
 ```
 
 ## Features
@@ -28,7 +32,8 @@ $ yarn add react-matrix-tree
 ```jsx
 import React from 'react'
 
-import { Tree } from 'react-matrix-tree'
+import { Tree } from 'react-matrix-tree';
+import 'react-matrix-tree/dist/react-matrix-tree.css';
 
 function App() {
   const data = [{ title: 'Title' }]
@@ -48,7 +53,8 @@ function App() {
 ```jsx
 import React from 'react'
 
-import { Tree } from 'react-matrix-tree'
+import { Tree } from 'react-matrix-tree';
+import 'react-matrix-tree/dist/react-matrix-tree.css';
 
 function App() {
   const data = [{ title: 'Title', data: [{ title: 'Title' }, { title: 'Title' }] }]
@@ -68,7 +74,8 @@ function App() {
 ```jsx
 import React from 'react'
 
-import { Tree } from 'react-matrix-tree'
+import { Tree } from 'react-matrix-tree';
+import 'react-matrix-tree/dist/react-matrix-tree.css';
 
 function App() {
   const data = [{ title: 'Title', data: [{ title: 'Title' }, { title: 'Title' }, { title: 'Title' }] }]
@@ -88,7 +95,8 @@ function App() {
 ```jsx
 import React from 'react'
 
-import { Tree } from 'react-matrix-tree'
+import { Tree } from 'react-matrix-tree';
+import 'react-matrix-tree/dist/react-matrix-tree.css';
 
 function App() {
   const data = [
@@ -131,7 +139,7 @@ Properties used to customise the rendering:
 
 ## Contribute
 
-Show your ❤️ and support by giving a ⭐. Any suggestions are welcome!
+Show your ❤️ and support by giving a ⭐. Any suggestions are welcome! venkatmcajj@gmail.com
 
 ## License
 
