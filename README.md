@@ -141,6 +141,11 @@ Properties used to customise the rendering:
 
 Show your ❤️ and support by giving a ⭐. Any suggestions are welcome! venkatmcajj@gmail.com
 
+
+## Financial Contributors
+
+Become a financial contributor and help us sustain our community. [Contribute](https://opencollective.com/react-matrix-tree) 
+
 ## License
 
 Licensed under MIT
