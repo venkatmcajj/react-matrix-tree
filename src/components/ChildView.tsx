@@ -1,66 +1,6 @@
-import React from 'react'
-import { Arrayvalues, IColor } from '../types'
+import React, { useEffect } from 'react'
+import { Arrayvalues } from '../types'
 import { GetTree } from './TreeComponent'
-import styled from 'styled-components'
-
-const BottomArrow = styled.div<IColor>`
-  border-bottom: 5px solid ${(props) => props.color};
-`
-const BottomArrowDownContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  &:last-child {
-    margin-right: -19px;
-    margin-left: auto;
-  }
-`
-const TopArrowUpContainer = styled('div')({
-  display: 'flex',
-  justifyContent: 'center',
-})
-const BottomArrowDown = styled.div<IColor>`
-  content: '';
-  width: 0;
-  height: 0;
-  margin-left: -19px;
-  border-top: 15px solid ${(props) => props.color};
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  margin-top: 20px;
-  position: relative;
-  &::before {
-    content: '';
-    width: 4px;
-    height: 25px;
-    background: ${(props) => props.color};
-    margin-right: -2px;
-    margin-bottom: 14px;
-    position: absolute;
-    bottom: 100%;
-    right: 50%;
-  }
-`
-const TopArrowUp = styled.div<IColor>`
-  content: '';
-  width: 0;
-  height: 0;
-  border-bottom: 15px solid ${(props) => props.color};
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  margin-bottom: 20px;
-  position: relative;
-  &::before {
-    content: '';
-    width: 4px;
-    height: 25px;
-    background: ${(props) => props.color};
-    margin-right: -3px;
-    margin-top: 14px;
-    position: absolute;
-    top: 100%;
-    right: 50%;
-  }
-`
 
 type ChildProps = {
   ismobileview: boolean
@@ -69,6 +9,10 @@ type ChildProps = {
   color: string
 }
 function ChildView({ ismobileview, level, item, color }: ChildProps) {
+  useEffect(() => {
+    const ele = document.documentElement
+    ele.style.setProperty('--treecolor', color)
+  }, [color])
   const { data = [] } = item
   let canShowChild = false
   if (ismobileview) {
@@ -92,16 +36,16 @@ function ChildView({ ismobileview, level, item, color }: ChildProps) {
               marginBottom: 10,
             }}
           >
-            <TopArrowUpContainer>
-              <TopArrowUp color={color} />
-            </TopArrowUpContainer>
-            <BottomArrow color={color} />
-            <BottomArrowDownContainer>
+            <div className='toparrowup-container'>
+              <div className='toparrowup' />
+            </div>
+            <div className='bottomarrow' />
+            <div className='bottomarrowdown-container'>
               {data &&
                 data.map((e1: Arrayvalues, index1: number) => {
-                  return <BottomArrowDown color={color} key={`${e1.title}${index1}${level}`}></BottomArrowDown>
+                  return <div className='bottomarrowdown' key={`${e1.title}${index1}${level}`}></div>
                 })}
-            </BottomArrowDownContainer>
+            </div>
           </div>
           <GetTree color={color} childrens={data} level={level + 1} ismobileview={ismobileview} />
         </>

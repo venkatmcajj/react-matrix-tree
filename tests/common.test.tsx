@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { render, fireEvent } from '@testing-library/react'
-import 'jest-styled-components'
 import 'jest-canvas-mock'
 import '@testing-library/jest-dom'
 import { Tree } from '../src'

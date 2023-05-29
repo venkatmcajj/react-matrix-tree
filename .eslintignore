@@ -1,2 +1,4 @@
 node_modules
 dist
+global.d.ts
+rollup.config.js
